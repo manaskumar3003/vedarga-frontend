@@ -29,7 +29,7 @@ const Page = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 {Bloglist.map((blog) => (
-                    <Blogpage key={blog._id} title = {blog.title} content={blog.content}/>
+                    <Blogpage key={blog._id} title = {blog.title} slugurl={blog._id} content={blog.content}/>
                        
                 ))}
         </div>

@@ -2,9 +2,11 @@ import React from 'react'
 
 interface BlogpageProps {
     title: string;
-    content: string;}
+    content: string;
+    slugurl:string;
+}
 
-const Blogpage: React.FC<BlogpageProps> = ({ title, content }) => {
+const Blogpage: React.FC<BlogpageProps> = ({ title, content,slugurl }) => {
 
   return (
     <div>
@@ -18,7 +20,7 @@ const Blogpage: React.FC<BlogpageProps> = ({ title, content }) => {
 
 
   
-    <a className="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-neutral-700 dark:hover:border-transparent dark:hover:shadow-black/40" href="#">
+    <a className="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-neutral-700 dark:hover:border-transparent dark:hover:shadow-black/40" href={slugurl}>
       <div className="aspect-w-16 aspect-h-11">
         <img className="w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description"/>
       </div>
